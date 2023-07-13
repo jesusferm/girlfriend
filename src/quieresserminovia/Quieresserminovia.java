@@ -19,8 +19,11 @@ public class Quieresserminovia {
     public static void main(String[] args) {
 	Main logIn = new Main();
         logIn.setVisible(true);
+        String str = "javax.swing.plaf.nimbus.NimbusLookAndFeel";
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+            UIManager.getCrossPlatformLookAndFeelClassName();
+            UIManager.setLookAndFeel(str);
         } catch(Exception e) {
             System.out.println("Error setting native LAF: " + e);
         }

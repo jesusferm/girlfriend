@@ -8,11 +8,9 @@
 package quieresserminovia;
 
 import java.awt.Image;
-import java.awt.Toolkit;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.JOptionPane;
-import javax.swing.ImageIcon;
 
 /**
  *
@@ -107,7 +105,7 @@ public class Main extends javax.swing.JFrame {
     private void jbNoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbNoActionPerformed
         jbNo.setText("Sí");
 	jbSi.setText("No");
-	JOptionPane.showMessageDialog(null, "Sabía que dirías que sí! ❤️\nGracias.","Ah! Te chingé!", JOptionPane.INFORMATION_MESSAGE);
+	JOptionPane.showMessageDialog(null, "Vez que sí querías!! ❤️\nGracias.","Ah! Te chingé!", JOptionPane.INFORMATION_MESSAGE);
 	System.exit(0);
     }//GEN-LAST:event_jbNoActionPerformed
 
@@ -119,8 +117,8 @@ public class Main extends javax.swing.JFrame {
     private void jbNoMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbNoMouseMoved
         int w = jpMain.getWidth()-30;
 	int h = jpMain.getHeight()-30;
-	int y = (int) (Math.random()*(w-1+1)+1);
-	int x = (int) (Math.random()*(h-1+1)+1);
+	int y = (int) (Math.random()*(w-1+1)+10);
+	int x = (int) (Math.random()*(h-1+1)+10);
 	jbNo.setLocation (y, x);
 	jbNo.setVisible(true);
     }//GEN-LAST:event_jbNoMouseMoved
