@@ -9,6 +9,8 @@ package quieresserminovia;
 
 import java.awt.Image;
 import java.awt.Toolkit;
+import java.io.IOException;
+import javax.imageio.ImageIO;
 import javax.swing.JOptionPane;
 import javax.swing.ImageIcon;
 
@@ -24,10 +26,13 @@ public class Main extends javax.swing.JFrame {
 	public Main() {
             initComponents();
             setLocationRelativeTo(null);
-            //Image favicon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("./favicon.png"));
-            //ImageIcon favicon = new ImageIcon("./favicon.png");
-            //setIconImage(favicon);
-            //setIconImage(favicon.getImage());
+            Image im = null;
+            try {
+                im = ImageIO.read(getClass().getResource("favicon.png"));
+                setIconImage(im);
+            } catch (IOException ex) {
+                //Logger.getLogger(chat.class.getName()).log(Level.SEVERE, null, ex);
+            }
             setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
             this.setTitle("Quieres ser mi novia?");
 	}
