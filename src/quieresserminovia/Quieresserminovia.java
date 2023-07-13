@@ -9,7 +9,7 @@ import javax.swing.UIManager;
 
 /**
  *
- * @author blip
+ * @author linuxitos
  */
 public class Quieresserminovia {
     /**

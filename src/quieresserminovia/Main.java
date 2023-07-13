@@ -2,6 +2,8 @@
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
+ *
+ * @author linuxitos <linuxitos@gmail.com>
  */
 package quieresserminovia;
 
@@ -12,7 +14,7 @@ import javax.swing.ImageIcon;
 
 /**
  *
- * @author blip
+ * @author linuxitos
  */
 public class Main extends javax.swing.JFrame {
 
@@ -22,9 +24,9 @@ public class Main extends javax.swing.JFrame {
 	public Main() {
             initComponents();
             setLocationRelativeTo(null);
-            Image favicon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("./favicon.png"));
+            //Image favicon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("./favicon.png"));
             //ImageIcon favicon = new ImageIcon("./favicon.png");
-            setIconImage(favicon);
+            //setIconImage(favicon);
             //setIconImage(favicon.getImage());
             setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
             this.setTitle("Quieres ser mi novia?");
