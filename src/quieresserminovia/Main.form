@@ -56,6 +56,7 @@
         <Component class="javax.swing.JButton" name="jbNo">
           <Properties>
             <Property name="text" type="java.lang.String" value="No"/>
+            <Property name="opaque" type="boolean" value="true"/>
           </Properties>
           <Events>
             <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="jbNoMouseMoved"/>

@@ -9,6 +9,7 @@ package quieresserminovia;
 
 import java.awt.Image;
 import java.io.IOException;
+import java.util.concurrent.ThreadLocalRandom;
 import javax.imageio.ImageIO;
 import javax.swing.JOptionPane;
 
@@ -51,7 +52,6 @@ public class Main extends javax.swing.JFrame {
         jlblBack = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(576, 384));
         setResizable(false);
 
         jpMain.setLayout(null);
@@ -66,6 +66,7 @@ public class Main extends javax.swing.JFrame {
         jbSi.setBounds(130, 220, 100, 60);
 
         jbNo.setText("No");
+        jbNo.setOpaque(true);
         jbNo.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
                 jbNoMouseMoved(evt);
@@ -115,11 +116,11 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_jbSiActionPerformed
 
     private void jbNoMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbNoMouseMoved
-        int w = jpMain.getWidth()-30;
-	int h = jpMain.getHeight()-30;
-	int y = (int) (Math.random()*(w-1+1)+10);
-	int x = (int) (Math.random()*(h-1+1)+10);
-	jbNo.setLocation (y, x);
+        int w = jpMain.getWidth();
+	int h = jpMain.getHeight();
+        int y = ThreadLocalRandom.current().nextInt(0, h - 60);
+        int x = ThreadLocalRandom.current().nextInt(0, w - 90);
+	jbNo.setLocation (x, y);
 	jbNo.setVisible(true);
     }//GEN-LAST:event_jbNoMouseMoved
     
